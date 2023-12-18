@@ -1,0 +1,53 @@
+npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+
+styles CSS 
+fonts
+images
+
+A) fichier global.css ==> fichiers avec des regles css génériques applicables à l'ensemble de l'application
+B) fichier css module = ex ==> home.module.css ==> limiter le scope des règles css à un composant en particulier dansn l'exemple le composant Home
+C) librairie clsx pour du style conditionnel
+
+D) Next optimize les fonts grace au module next/fonts, il pre download les fonts file ste les gardes come assets statics qui seront injectés immediatement au chargement de la page
+E) module next/image pour optimiser les assets images (taille et poids) ==> utilisation du composant <Image> : extension de la balise html < img/>
+    Bonne pratique pour les images toujours précisier width et height
+
+
+CREATION de LAYOUTS et PAGES
+
+Next utilise lke file-system routing basé sur la structures des dossiers ==> chaque dossier represent une route et les sous-dossiers des routes imbriquées
+
+/app ---> /
+/app/dashboard ---> /dashboard
+/app/dashboard/invoces ---> /dashboard/invoces
+
+
+** Pour créer une page associée à une route on utilise le fichier page.tsx dans chaque dossier ayant une UI a afficher 
+
+
+/app
+    page.tsx ---> /
+/app/dashboard 
+        page.tsx---> /dashboard
+/app/dashboard/invoces 
+            page.tsx---> /dashboard/invoces
+
+
+*** pour créer une route =
+    dossier avec nom de la route
+    fichier page.tsx dabs le dossier de la route
+
+
+
+** Pour créer une UI commune à plusieurs pages on utilise le fichier layout.tsx
+
+
+NAVIGATION
+
+utilisation du module next/link
+
+composant <Link> qui permet une "client side navigation"
+
+eviter le rafraichissement entier de la page lorsqu'on passe d'un lien à l'autre de la navigation
+
+Hook usePathname() ==> detecter le nom de la route dans laquelle on se trouve lors d ela navigation
