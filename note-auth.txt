@@ -1,0 +1,12 @@
+authentification avec NextAuth.js
+
+npm i next-auth@beta
+
+next génère une key pour l'applicables qui sera utilisée pour encrypt cookies, et pour sécuriser les user sessions
+lancer pour cela la commande  ==> openssl rand -base64 32
+
+--> création d'un variable globale dand .env AUTH_SECRET= 
+==> copier la clé ainsi générée
+
+
+Middlewares pour protéger l'accès de certaines sections de l'application si on n'est pas connecté
