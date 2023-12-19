@@ -51,3 +51,16 @@ composant <Link> qui permet une "client side navigation"
 eviter le rafraichissement entier de la page lorsqu'on passe d'un lien à l'autre de la navigation
 
 Hook usePathname() ==> detecter le nom de la route dans laquelle on se trouve lors d ela navigation
+
+
+POSTGRES DATABASE
+
+Dans Vercel =
+--> Create a Postgres database
+Next, to set up a database, click Continue to Dashboard and select the Storage tab from your project dashboard. 
+Select Connect Store → Create New → Postgres → Continue.
+
+installer npm i @vercel/postgres
+
+
+
